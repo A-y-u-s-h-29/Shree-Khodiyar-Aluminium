@@ -17,10 +17,10 @@ const App = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [review, setReview] = useState({ name: '', rating: 5, comment: '' });
   const [reviews, setReviews] = useState([
-    { id: 1, name: 'Rahul Sharma', rating: 5, comment: 'Excellent service! Dr. Gupta is very professional and the staff is friendly. Painless treatment!', date: '2024-01-15' },
-    { id: 2, name: 'Priya Patel', rating: 4, comment: 'Very clean clinic with modern equipment. My root canal was completely pain-free.', date: '2024-01-10' },
-    { id: 3, name: 'Amit Kumar', rating: 5, comment: 'Emergency treatment at midnight! Thank you Prime Smile for being available 24/7.', date: '2024-01-05' },
-    { id: 4, name: 'Neha Singh', rating: 5, comment: 'Best dental experience ever! The cosmetic dentistry transformed my smile.', date: '2024-01-02' },
+    { id: 1, name: 'Rahul Sharma', rating: 5, comment: 'Excellent service! Dr. Seema is very professional and the staff is friendly. Painless treatment!', date: '2024-01-15' },
+    { id: 2, name: 'Priya Patel', rating: 4, comment: 'Very clean clinic with modern equipment. My dental procedure was completely pain-free.', date: '2024-01-10' },
+    { id: 3, name: 'Amit Kumar', rating: 5, comment: 'Emergency treatment was quick and efficient! Thank you Cloxe Dental for great service.', date: '2024-01-05' },
+    { id: 4, name: 'Neha Singh', rating: 5, comment: 'Best dental experience ever! Dr. Seema transformed my smile.', date: '2024-01-02' },
   ]);
 
   const services = [
@@ -30,28 +30,27 @@ const App = () => {
     { icon: <FaTeeth className="text-3xl" />, title: 'Dental Implants', desc: 'Permanent solution for missing teeth', color: 'from-amber-500 to-orange-400' },
     { icon: <FaXRay className="text-3xl" />, title: 'Digital X-Ray', desc: 'Advanced diagnostic imaging', color: 'from-indigo-500 to-purple-400' },
     { icon: <FaSmile className="text-3xl" />, title: 'Smile Design', desc: 'Complete smile makeovers', color: 'from-rose-500 to-pink-400' },
-    { icon: <FaAmbulance className="text-3xl" />, title: 'Emergency Care', desc: '24/7 emergency dental services', color: 'from-red-500 to-orange-400' },
+    { icon: <FaAmbulance className="text-3xl" />, title: 'Emergency Care', desc: 'Emergency dental services', color: 'from-red-500 to-orange-400' },
     { icon: <FaTeethOpen className="text-3xl" />, title: 'Braces', desc: 'Modern orthodontic treatments', color: 'from-green-500 to-emerald-400' },
   ];
 
   const galleryImages = [
     { id: 1, src: "gal1.webp", title: 'Modern Clinic Interior', category: 'clinic' },
-    { id: 2, src: "gal2.png",  title: 'Advanced Equipment', category: 'equipment' },
-    { id: 4, src: "gal4.jpg",  title: 'Waiting Area', category: 'clinic' },
-    { id: 5, src: "gal5.png",  title: 'Digital Imaging Lab', category: 'equipment' },
-   
+    { id: 2, src: "gal2.png", title: 'Advanced Equipment', category: 'equipment' },
+    { id: 4, src: "gal4.jpg", title: 'Waiting Area', category: 'clinic' },
+    { id: 5, src: "gal5.png", title: 'Digital Imaging Lab', category: 'equipment' },
   ];
 
   const heroImages = [
     { id: 1, src: "hero1.jpg", title: 'State-of-the-Art Dental Clinic', subtitle: 'Advanced Technology • Comfortable Environment' },
-    { id: 2, src: "hero2.jpeg", title: 'Expert Dental Team', subtitle: '15+ Years Experience • Specialized Care' },
+    { id: 2, src: "hero2.jpeg", title: 'Expert Dental Team', subtitle: 'Experienced Professionals • Specialized Care' },
   ];
 
   const stats = [
-    { number: '5000+', label: 'Happy Patients', icon: '😊' },
-    { number: '98%', label: 'Success Rate', icon: '📈' },
-    { number: '24/7', label: 'Emergency Service', icon: '🚨' },
+    { number: '3000+', label: 'Happy Patients', icon: '😊' },
+    { number: '96%', label: 'Success Rate', icon: '📈' },
     { number: '15+', label: 'Years Experience', icon: '⭐' },
+    { number: '24/7', label: 'Emergency Service', icon: '🚨' },
   ];
 
   const handleSubmitReview = (e) => {
@@ -100,7 +99,7 @@ const App = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-800 to-teal-600 bg-clip-text text-transparent">
-                  Prime Smile
+                  Cloxe Dental
                 </h1>
                 <p className="text-xs text-gray-500 font-medium">Dental Care Center</p>
               </div>
@@ -113,7 +112,6 @@ const App = () => {
               <a href="#gallery" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Gallery</a>
               <a href="#reviews" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Reviews</a>
               <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-300">Contact</a>
-              
             </div>
 
             {/* Mobile menu button */}
@@ -137,7 +135,6 @@ const App = () => {
                 <a href="#gallery" className="text-gray-700 font-medium hover:text-blue-600 py-2">Gallery</a>
                 <a href="#reviews" className="text-gray-700 font-medium hover:text-blue-600 py-2">Reviews</a>
                 <a href="#contact" className="text-gray-700 font-medium hover:text-blue-600 py-2">Contact</a>
-                
               </div>
             </div>
           )}
@@ -157,8 +154,6 @@ const App = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Hero Content */}
             <div className="space-y-8">
-              
-              
               <h1 className="text-5xl md:text-6xl font-bold text-gray-900 leading-tight">
                 Your Perfect Smile <span className="relative">
                   <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent">Journey</span>
@@ -177,7 +172,7 @@ const App = () => {
               <p className="text-xl text-gray-600 leading-relaxed">
                 Experience world-class dental care with cutting-edge technology, 
                 compassionate professionals, and a commitment to your comfort and 
-                oral health.
+                oral health. Led by Dr. Seema Bansal.
               </p>
 
               {/* Stats */}
@@ -194,11 +189,9 @@ const App = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                
-                
-                <a href="tel:7303571705" className="group border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-full hover:bg-blue-50 transition-all duration-300 flex items-center justify-center space-x-3">
+                <a href="tel:9560933477" className="group bg-gradient-to-r from-blue-600 to-teal-400 text-white px-8 py-4 rounded-full hover:shadow-2xl transition-all duration-300 flex items-center justify-center space-x-3">
                   <FaPhoneAlt />
-                  <span className="font-bold">Call Now</span>
+                  <span className="font-bold">Call Now: 9560933477</span>
                 </a>
               </div>
             </div>
@@ -207,34 +200,32 @@ const App = () => {
             <div className="relative">
               {/* Main Image */}
               <div className="relative bg-gradient-to-br from-blue-500 via-blue-600 to-teal-500 rounded-3xl overflow-hidden shadow-2xl h-96">
-  <img
-    src={heroImages[currentImageIndex].src}
-    alt={heroImages[currentImageIndex].title}
-    className="w-full h-full object-cover"
-  />
+                <img
+                  src={heroImages[currentImageIndex].src}
+                  alt={heroImages[currentImageIndex].title}
+                  className="w-full h-full object-cover"
+                />
 
-  {/* Text Overlay */}
-  <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-6">
-    <h3 className="text-2xl font-bold text-white mb-3">
-      {heroImages[currentImageIndex].title}
-    </h3>
-    <p className="text-white/90">
-      {heroImages[currentImageIndex].subtitle}
-    </p>
-  </div>
-</div>
-
-
+                {/* Text Overlay */}
+                <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center px-6">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    {heroImages[currentImageIndex].title}
+                  </h3>
+                  <p className="text-white/90">
+                    {heroImages[currentImageIndex].subtitle}
+                  </p>
+                </div>
+              </div>
 
               {/* Second Image - Floating Card */}
               <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-2xl border border-blue-100 max-w-xs">
                 <div className="flex items-start space-x-4">
                   <div className="bg-gradient-to-r from-blue-600 to-teal-400 p-3 rounded-full">
-                    <MdHealthAndSafety className="text-2xl text-white" />
+                    <FaUserMd className="text-2xl text-white" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-gray-900">Pain-Free Treatment</h3>
-                    <p className="text-sm text-gray-600 mt-1">Latest anesthesia technology for complete comfort</p>
+                    <h3 className="font-bold text-gray-900">Dr. Seema Bansal</h3>
+                    <p className="text-sm text-gray-600 mt-1">Experienced Dental Specialist</p>
                   </div>
                 </div>
               </div>
@@ -284,14 +275,13 @@ const App = () => {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.desc}</p>
-                 <a
-  href="tel:7303571705"
-  className="text-blue-600 font-semibold flex items-center space-x-2 hover:text-blue-700 transition-colors"
->
-  <span>Call Now</span>
-  <FaArrowRight className="translate-x-0 hover:translate-x-2 transition-transform duration-300" />
-</a>
-
+                  <a
+                    href="tel:9560933477"
+                    className="text-blue-600 font-semibold flex items-center space-x-2 hover:text-blue-700 transition-colors"
+                  >
+                    <span>Book Appointment</span>
+                    <FaArrowRight className="translate-x-0 hover:translate-x-2 transition-transform duration-300" />
+                  </a>
                 </div>
               </div>
             ))}
@@ -299,56 +289,50 @@ const App = () => {
         </div>
       </section>
 
-      <section
-  id="gallery"
-  className="py-20 bg-gradient-to-b from-white to-blue-50"
->
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-    {/* Heading */}
-    <div className="text-center mb-16">
-      <h2 className="text-5xl font-bold text-gray-900 mb-4">
-        Our{" "}
-        <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent">
-          Clinic Gallery
-        </span>
-      </h2>
-      <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-        Explore our modern facilities and advanced dental equipment
-      </p>
-    </div>
-
-    {/* Gallery Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {galleryImages.map((image) => (
-        <div
-          key={image.id}
-          className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
-        >
-          {/* Image */}
-          <div className="aspect-square overflow-hidden">
-            <img
-              src={image.src}
-              alt={image.title}
-              loading="lazy"
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
+      <section id="gallery" className="py-20 bg-gradient-to-b from-white to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-5xl font-bold text-gray-900 mb-4">
+              Our{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent">
+                Clinic Gallery
+              </span>
+            </h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Explore our modern facilities and advanced dental equipment
+            </p>
           </div>
 
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
-            <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-              <h3 className="font-bold text-lg">{image.title}</h3>
-              <p className="text-sm opacity-90">{image.category}</p>
-            </div>
+          {/* Gallery Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {galleryImages.map((image) => (
+              <div
+                key={image.id}
+                className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+              >
+                {/* Image */}
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={image.src}
+                    alt={image.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-5">
+                  <div className="text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 className="font-bold text-lg">{image.title}</h3>
+                    <p className="text-sm opacity-90">{image.category}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-
-  </div>
-</section>
-
+      </section>
 
       {/* Testimonials Section */}
       <section id="reviews" className="py-20 bg-gradient-to-b from-blue-50 to-white">
@@ -385,10 +369,6 @@ const App = () => {
               </div>
             ))}
           </div>
-
-          <div className="text-center">
-           
-          </div>
         </div>
       </section>
 
@@ -410,11 +390,11 @@ const App = () => {
                   <div>
                     <h3 className="font-bold text-xl text-gray-900 mb-2">Clinic Address</h3>
                     <div className="space-y-1 text-gray-600">
-                      <p className="font-medium">Prime Smile Dental Care</p>
-                      <p>A-83, Mahindra Enclave</p>
-                      <p>Near Navyug Hospital, Chiranjeev Vihar</p>
-                      <p>Bank Enclave, Shastri Nagar</p>
-                      <p>Ghaziabad, Uttar Pradesh 201002</p>
+                      <p className="font-medium">Cloxe Dental</p>
+                      <p>Shop no.38, Second floor</p>
+                      <p>Central Plaza, Sector 4</p>
+                      <p>Greater Noida, Ghaziabad</p>
+                      <p>Uttar Pradesh 201318</p>
                     </div>
                   </div>
                 </div>
@@ -425,53 +405,57 @@ const App = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl text-gray-900 mb-2">Contact Number</h3>
-                    <a href="tel:07303571705" className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-                      7303571705
+                    <a href="tel:9560933477" className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                      9560933477
                     </a>
-                    <p className="text-gray-600 mt-2">24/7 Emergency Dental Service Available</p>
+                    <p className="text-gray-600 mt-2">Consultation with Dr. Seema Bansal</p>
                   </div>
                 </div>
 
-                
+                <div className="flex items-start space-x-6">
+                  <div className="bg-gradient-to-r from-blue-600 to-teal-400 p-4 rounded-2xl">
+                    <FaUserMd className="text-2xl text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-xl text-gray-900 mb-2">Lead Dentist</h3>
+                    <p className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-teal-400 bg-clip-text text-transparent">
+                      Dr. Seema Bansal
+                    </p>
+                    <p className="text-gray-600 mt-2">Experienced Dental Specialist</p>
+                  </div>
+                </div>
               </div>
             </div>
 
             <div className="bg-black backdrop-blur-sm p-1 rounded-3xl shadow-2xl border border-white">
-             <iframe
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.671363874184!2d77.46511855910123!3d28.669557222887118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf1e9568a1581%3A0x328f4c36e13cbec!2sPrime%20Smile%20Dental%20Care!5e0!3m2!1sen!2sin!4v1766058837031!5m2!1sen!2sin"
-  width="100%"
-  height="450"
-  style={{ border: 0 }}
-  allowFullScreen
-  loading="lazy"
-  referrerPolicy="no-referrer-when-downgrade"
-  className="rounded-xl shadow-lg"
-/>
-
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.6812315417023!2d77.4377509!3d28.6093383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceb2939024859%3A0x6f478d90f9abebc6!2sCloxe%20dental!5e0!3m2!1sen!2sin!4v1766474939968!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-xl shadow-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
-
       {/* WhatsApp Float Button */}
       <a 
-  href="https://wa.me/917303571705" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  className="fixed bottom-20 right-8 z-40 group"
->
-  <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
-
-  <div className="relative bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110">
-    <FaWhatsapp className="text-3xl" />
-  </div>
-
-  <div className="absolute -right-2 -top-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
-    24/7
-  </div>
-</a>
-
+        href="https://wa.me/919560933477" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="fixed bottom-20 right-8 z-40 group"
+      >
+        <div className="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full blur opacity-30 group-hover:opacity-100 transition duration-500"></div>
+        <div className="relative bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110">
+          <FaWhatsapp className="text-3xl" />
+        </div>
+       
+      </a>
 
       {/* Footer */}
       <footer className="bg-gradient-to-b from-gray-900 to-black text-white py-16">
@@ -483,12 +467,12 @@ const App = () => {
                   <GiTooth className="text-2xl" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold">Prime Smile</h2>
+                  <h2 className="text-2xl font-bold">Cloxe Dental</h2>
                   <p className="text-blue-200">Premium Dental Care</p>
                 </div>
               </div>
               <p className="text-gray-400">
-                Providing exceptional dental care with compassion, expertise, and state-of-the-art technology since 2009.
+                Providing exceptional dental care with compassion, expertise, and state-of-the-art technology. Led by Dr. Seema Bansal.
               </p>
             </div>
             
@@ -524,53 +508,41 @@ const App = () => {
               <h3 className="text-xl font-bold mb-6 text-white">Clinic Hours</h3>
               <ul className="space-y-4 text-gray-400">
                 <li className="flex justify-between items-center pb-3 border-b border-gray-800">
-                  <span>Monday - Friday</span>
-                  <span className="text-white font-semibold">9:00 AM - 8:00 PM</span>
-                </li>
-                <li className="flex justify-between items-center pb-3 border-b border-gray-800">
-                  <span>Saturday</span>
-                  <span className="text-white font-semibold">9:00 AM - 6:00 PM</span>
+                  <span>Monday - Saturday</span>
+                  <span className="text-white font-semibold">10:00 AM - 8:00 PM</span>
                 </li>
                 <li className="flex justify-between items-center pb-3 border-b border-gray-800">
                   <span>Sunday</span>
-                  <span className="text-white font-semibold">Emergency Only</span>
+                  <span className="text-white font-semibold">10:00 AM - 2:00 PM</span>
                 </li>
                 <li className="flex justify-between items-center">
                   <span>Emergency</span>
-                  <span className="text-red-400 font-bold">24/7 Available</span>
+                  <span className="text-red-400 font-bold">Contact for Appointments</span>
                 </li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-  <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-    
-    <p className="text-gray-400">
-      © {new Date().getFullYear()} Prime Smile Dental Care. All rights reserved.
-    </p>
-
-    <p className="text-gray-400">
-      Designed by{" "}
-      <a
-        href="https://digitalexpressindia.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300"
-      >
-        Digital Express India
-      </a>
-    </p>
-
-  </div>
-</div>
-
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400">
+                © {new Date().getFullYear()} Cloxe Dental. All rights reserved.
+              </p>
+              <p className="text-gray-400">
+                Designed by{" "}
+                <a
+                  href="https://digitalexpressindia.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300"
+                >
+                  Digital Express India
+                </a>
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
-
-     
-
-      
     </div>
   );
 };
